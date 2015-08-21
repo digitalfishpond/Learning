@@ -19,35 +19,31 @@ myApp.config(function($routeProvider) {
         })
 });
 
-// it is possible to write custom services that are accessible from other controllers through DI:
-myApp.service('nameService', function(){
-    var self = this;
-    this.name = "Denis Poisson";
-    this.nameLength = function(){
-        return self.name.length;
-    };
-});
+myApp.controller('mainController', ['$scope','$location', '$log', function($scope, $location, $log) {
 
-// inject the service just like any other service in teh controller parameters:
-myApp.controller('mainController', ['$scope','$location', '$log', "nameService", function($scope, $location, $log, nameService) {
-
-    $log.log(nameService.name);
-    $log.log(nameService.nameLength());
-    $log.info($location.path());
-
-    // the local scope name is set to the singleton's name value
-    $scope.name = nameService.name;
-    // a watcher is set on the scope to check for changes and update the namesService.name value accordingly
-    $scope.$watch("name", function() {
-       nameService.name = $scope.name;
-    });
-
-}]);
-myApp.controller('secondController', ['$scope','$location', '$log', 'nameService', function($scope, $location, $log, nameService) {
-
-    $log.info($location.path());
-    // the local scope name is set to the singleton's name value
-    $scope.name = nameService.name;
 
 
 }]);
+
+myApp.controller('secondController', ['$scope','$location', '$log', function($scope, $location, $log) {
+
+
+
+}]);
+
+// Here is the custom directive. Its name will be normalised to "search-result" in the html
+// Whatever is inserted in the returned object will be the actual directive.
+myApp.directive("searchResult", function() {
+
+    return {
+
+        // A: Attribute, E: element, C: Class, M: coMMent
+        restrict: 'AECM',
+
+        //this is the output for this custom directive "searchResult" --> "search-result" in the html
+        template: "<a href='#' class='list-group-item'><h4 class='list-group-item-heading'>Poisson, Denis</h4><p class='list-group-item-text'>Ul. Ziolowa 5, Lodz, 91-364, Poland </p> </a>",
+
+        // replace is false by default. It removes the calling html tags altogether and leaves nothing but the template.
+        replace: true
+    }
+})
