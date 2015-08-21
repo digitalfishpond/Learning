@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa616dfc-600c-49aa-a978-f9080d1afd5d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/main.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/second.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="11 Custom Directives.iws" />
@@ -203,6 +198,13 @@
       <option name="number" value="Default" />
       <updated>1440176743298</updated>
     </task>
+    <task id="LOCAL-00001" summary="created">
+      <created>1440186510739</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1440186510739</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -234,7 +236,8 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="created" />
+    <option name="LAST_COMMIT_MESSAGE" value="created" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
