@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-us" ng-app="myApp">
+    <head>
+        <title>Learn and Understand AngularJS</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta charset="UTF-8">
+
+        <!-- load bootstrap and fontawesome via CDN -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+        <style>
+            html, body, input, select, textarea
+            {
+                font-size: 1.05em;
+            }
+        </style>
+        
+        <!-- load angular via CDN -->
+        <script src="//code.angularjs.org/1.3.0-rc.1/angular.min.js"></script>
+        <script src="common-directives-2.js"></script>
+    </head>
+    
+    <body>
+
+        <header>
+			<nav class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/">Common Directives</a>
+				</div>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+				</ul>
+			</div>
+			</nav>
+		</header>
+
+        <div class="container">
+
+            <div ng-controller="mainController">
+                
+                <!-- ng-repeat is an iteration directive having the effect of a for...in loop -->
+                <ul ng-hide="flag === true" ng-repeat="rule in rules">
+                    
+                    <!-- ng-cloak hides the line until AngularJS has had a chance to resolve all its parts -- it avoids the code from appearing on the screen becore it is resolved. -->
+                    <li ng-cloak>Rule #{{ (rules.indexOf(rule) +1 ) + ": " + rule.ruledetail }}</li>
+                
+                </ul>
+                
+                <!-- ng-click is just one of dozens of events available as AngularJS custom directives -->
+                <input type="button" value="toggle" ng-click=" updateFlag() " />
+                 
+            </div>
+            
+		</div>
+
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Introduction to AngularJS</title>
+    <meta lang="en"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+    <style>
+        html, body, input, select, textarea
+        {
+            font-size: 1.05em !important;
+        }
+    </style>
+</head>
+    
+<body>
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Custom Attributes</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><i class="fa fa-home"></i>Home</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    
+    <!-- Interesting stuff starts here :) -->
+    <div class="container">
+        <div class="col-md-12">
+            <!-- style is a reserved html attribute, understandable by most browsers. -->
+            <h1 style="font-size: 8px">Hello world!</h1>
+
+            <!-- "reply" is a custom attribute, not recognised by browsers, but nevertheless present on the html file. 
+            The jS script can use it (see custom-attributes.js) 
+            the name of the attribute has been prefixed with 'data-' for HTML5 compliance and 'ng-' for AngularJS compliance-->
+            <h1 id="yes" data-ng-reply="Hello back!">Hello again!</h1>
+        </div>
+    </div>
+    <script type="text/javascript" src="custom-attributes.js"></script>
+</body>
+</html>
