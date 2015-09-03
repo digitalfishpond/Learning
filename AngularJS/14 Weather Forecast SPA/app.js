@@ -14,12 +14,17 @@ forecastApp.config(function($routeProvider) {
         })
 });
 
+forecastApp.service("cityNameService", function(){
+    this.cityName = "Lodz, PL";
+});
 
-
-forecastApp.controller = ('homepageController', ["$scope" , function($scope){
-
+forecastApp.controller('homepageController', ["$scope", "cityNameService", function($scope , cityNameService) {
+    $scope.cityName = cityNameService.cityName;
+    $scope.$watch("cityName" , function(){
+       cityNameService.cityName = $scope.cityName;
+    });
 }]);
 
-forecastApp.controller = ('forecastController', ["$scope" , function($scope){
-
+forecastApp.controller('forecastController', ["$scope", "cityNameService", function($scope , cityNameService) {
+    $scope.cityName = cityNameService.cityName;
 }]);
