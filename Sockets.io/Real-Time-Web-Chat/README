@@ -1,0 +1,10 @@
+This is the output of a tutorial by Krasmir Tsonev available at: 
+http://code.tutsplus.com/tutorials/real-time-chat-with-nodejs-socketio-and-expressjs--net-31708
+
+In order to run: copy contents of repo to an empty folder on your PC (quite high up on your pc's directory if using Windows to avoid 'distinguished name is too long' errors.
+
+After installing Node, open cmd/terminal in the top folder (containing package.json) and run: npm install 
+
+This will add all the dependencies mentioned in the package.json
+
+Then just run: 'node app.js' in the terminal and open localhost:3700 in two seperate browsers/tabs
