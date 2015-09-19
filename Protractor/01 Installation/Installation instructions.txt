@@ -1,0 +1,35 @@
+1 - Prerequisites: 
+	a) for Node, node-gyp requires Python 2.xx (at time of writing, v2.7.3), and Visual Studio (!!!) desktop specifically for the C++ libs. Complete instructions available at: https://github.com/nodejs/node-gyp
+	b) Java JDK is needed (with global variables set - 'path')
+	c) Google Chrome (not optional)
+	
+2- Install Node:
+	a) download and install Node from https://nodejs.org/en/ (ensure to 'add to path' in installation wizard)
+	b) check correct installation in cmd: 
+		node -v
+		npm --version
+		
+3- Install Protractor: 
+	a) in cmd:
+		npm install -g protractor
+	d) check installation:
+		protractor --version
+	e) list all nodes installed:
+		npm -g list
+	
+4- Check JDK is correctly installed:
+	a) in cmd:
+		java -version  (1 "-" sign only)
+
+5- Run Selenium Server
+	a) Update webdriver-manager in cmd:
+		webdriver-manager update
+	b) run webdriver-manager in cmd: 
+		webdriver-manager start
+
+6- Run dummy test to check protractor sanity
+	a) cd to the example test in cmd:
+		cd Users\<username>\AppData\Roaming\npm\node_modules\protractor\example
+	b) run the conf.js file
+		protractor conf.js
+	
