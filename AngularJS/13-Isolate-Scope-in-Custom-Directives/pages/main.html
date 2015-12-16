@@ -3,5 +3,11 @@
 
 <h3>Search Results</h3>
 <div class="list-group">
-    <search-result person-object="person"></search-result>
+    <!-- The custom Directive has specified the property 'scope' so its scope is now isolated for safety, 
+    and the properties on the Controller of the code that called it are no longer available to it by default. 
+Here, in the div with the attribute 'search-result' (that calls the searchResult custom directive), We have 
+added a custom attribute randomely named 'person-object'. It contains the value 'person' which is the name of 
+the object from the parent Controller that is needed. Combined with the changes in the custom directive in app.js, 
+this will allow passage through scopes for that one object-->
+    <div search-result person-object="person"></div>
 </div>
